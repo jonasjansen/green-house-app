@@ -27,6 +27,8 @@
 		DD84039929F2AF190053C3A3 /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84039829F2AF190053C3A3 /* EnvironmentView.swift */; };
 		DD84039B29F2BF960053C3A3 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84039A29F2BF960053C3A3 /* ControlView.swift */; };
 		DD84039D29F2CA6C0053C3A3 /* OverrideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84039C29F2CA6C0053C3A3 /* OverrideModel.swift */; };
+		DD8403A029F2D9360053C3A3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DD84039F29F2D9360053C3A3 /* SDWebImageSwiftUI */; };
+		DD8403A229F2DB640053C3A3 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8403A129F2DB640053C3A3 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		DD84039829F2AF190053C3A3 /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
 		DD84039A29F2BF960053C3A3 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		DD84039C29F2CA6C0053C3A3 /* OverrideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideModel.swift; sourceTree = "<group>"; };
+		DD8403A129F2DB640053C3A3 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 				DD84036629F276CB0053C3A3 /* FirebaseDatabase in Frameworks */,
 				DD84036429F276CB0053C3A3 /* FirebaseAnalyticsSwift in Frameworks */,
 				DD84036A29F276CB0053C3A3 /* FirebaseFirestore in Frameworks */,
+				DD8403A029F2D9360053C3A3 /* SDWebImageSwiftUI in Frameworks */,
 				DD84036E29F276CB0053C3A3 /* FirebaseStorage in Frameworks */,
 				DD84036229F276CB0053C3A3 /* FirebaseAnalytics in Frameworks */,
 				DD84036C29F276CB0053C3A3 /* FirebaseFirestoreSwift in Frameworks */,
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				DD84038C29F2A5BE0053C3A3 /* ContentView.swift */,
+				DD8403A129F2DB640053C3A3 /* ImageView.swift */,
 				DD84039829F2AF190053C3A3 /* EnvironmentView.swift */,
 				DD84039A29F2BF960053C3A3 /* ControlView.swift */,
 			);
@@ -158,6 +163,7 @@
 				DD84036929F276CB0053C3A3 /* FirebaseFirestore */,
 				DD84036B29F276CB0053C3A3 /* FirebaseFirestoreSwift */,
 				DD84036D29F276CB0053C3A3 /* FirebaseStorage */,
+				DD84039F29F2D9360053C3A3 /* SDWebImageSwiftUI */,
 			);
 			productName = "green-house-app";
 			productReference = 01DD746E29ED8099000A837C /* green-house-app.app */;
@@ -189,6 +195,7 @@
 			mainGroup = 01DD746529ED8099000A837C;
 			packageReferences = (
 				DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DD84039E29F2D9360053C3A3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 01DD746F29ED8099000A837C /* Products */;
 			projectDirPath = "";
@@ -221,6 +228,7 @@
 				DD84039329F2A5BF0053C3A3 /* ViewModel.swift in Sources */,
 				DD84039729F2AAE10053C3A3 /* EnvironmentModel.swift in Sources */,
 				DD84039529F2A7E20053C3A3 /* Environment.swift in Sources */,
+				DD8403A229F2DB640053C3A3 /* ImageView.swift in Sources */,
 				DD84037329F27E910053C3A3 /* FavouriteNumberView.swift in Sources */,
 				DD84039D29F2CA6C0053C3A3 /* OverrideModel.swift in Sources */,
 				DD84037429F27E910053C3A3 /* App.swift in Sources */,
@@ -458,6 +466,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		DD84039E29F2D9360053C3A3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -495,6 +511,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		DD84039F29F2D9360053C3A3 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD84039E29F2D9360053C3A3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

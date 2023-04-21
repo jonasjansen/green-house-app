@@ -24,6 +24,7 @@ class EnvironmentModel: ObservableObject {
                 }
                 let d = documents.first
                 if let d = d {
+                    // TODO: Get Image reference and download it.
                     self.item =  Environment(
                         id: d.documentID,
                         heating_state: d["heating_state"] as? String ?? "",
