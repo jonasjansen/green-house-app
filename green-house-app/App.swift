@@ -16,10 +16,7 @@ struct GreenHouseApp: App {
   var body: some Scene {
     WindowGroup {
         ContentView()
-      //NavigationStack {
-      //  FavouriteNumberView()
-      //  Spacer()
-      //}
+        EnvironmentView()
     }
   }
 }

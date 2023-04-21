@@ -8,7 +8,6 @@
 import Foundation
 
 struct Environment: Identifiable {
-    
     var id: String
     var heating_state: String
     var humidity: String
