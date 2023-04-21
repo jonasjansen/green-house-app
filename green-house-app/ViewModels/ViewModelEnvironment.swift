@@ -16,35 +16,23 @@ class ViewModelEnvironment: ObservableObject {
     {
         // Get a reference to the database
         let db = Firestore.firestore()
-        
-        db.collection("environment").order(by: "timestamp", descending: true).limit(to: 1).getDocuments
-        { snapshot, error in
-            
-            // Check for errors
-            if error == nil {
-                // No errors
-                
-                if let snapshot = snapshot {
-                    // Update the list property in the main thread
-                    DispatchQueue.main.async {
-                        
-                        self.list = snapshot.documents.map { d in
-                            
-                            return Environment(
-                                id: d.documentID,
-                                heating_state: d["heating_state"] as? String ?? "",
-                                humidity: d["humidity"] as? String ?? "",
-                                light_state: d["light_state"] as? String ?? "",
-                                moisture: d["moisture"] as? String ?? "",
-                                temperature: d["temperature"] as? String ?? "",
-                                timestamp: d["timestamp"] as? String ?? "")
-                        }
-                    }
+        db.collection("environment").order(by: "timestamp", descending: true).limit(to: 1)
+            .addSnapshotListener { querySnapshot, error in
+                guard let documents = querySnapshot?.documents else {
+                    print("Error fetching documents: \(error!)")
+                    return
+                }
+                let d = documents.first
+                if let d = d {
+                    self.item =  Environment(
+                        id: d.documentID,
+                        heating_state: d["heating_state"] as? String ?? "",
+                        humidity: d["humidity"] as? String ?? "",
+                        light_state: d["light_state"] as? String ?? "",
+                        moisture: d["moisture"] as? String ?? "",
+                        temperature: d["temperature"] as? String ?? "",
+                        timestamp: d["timestamp"] as? String ?? "")
                 }
             }
-            else {
-                // Handle the error
-            }
-        }
     }
 }

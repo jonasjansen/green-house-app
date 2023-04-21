@@ -17,47 +17,37 @@ struct EnvironmentView: View {
     
     var body: some View {
         VStack {
-            List (model.list) { item in
-                
-                HStack {
-                    Text("Temperature:")
-                    Spacer()
-                    Text(item.temperature)
-                }
-                HStack {
-                    Text("Humidity:")
-                    Spacer()
-                    Text(item.humidity)
-                }
-                HStack {
-                    Text("Moisture:")
-                    Spacer()
-                    Text(item.moisture)
-                }
-                HStack {
-                    Text("Light:")
-                    Spacer()
-                    Text(item.light_state)
-                }
-                HStack {
-                    Text("Heating:")
-                    Spacer()
-                    Text(item.heating_state)
-                }
-                HStack {
-                    Text("Updated at:")
-                    Spacer()
-                    Text(item.timestamp)
-                }
+            HStack {
+                Text("Temperature:")
+                Spacer()
+                Text(model.item.temperature)
+            }
+            HStack {
+                Text("Humidity:")
+                Spacer()
+                Text(model.item.humidity)
+            }
+            HStack {
+                Text("Moisture:")
+                Spacer()
+                Text(model.item.moisture)
+            }
+            HStack {
+                Text("Light:")
+                Spacer()
+                Text(model.item.light_state)
+            }
+            HStack {
+                Text("Heating:")
+                Spacer()
+                Text(model.item.heating_state)
+            }
+            HStack {
+                Text("Updated at:")
+                Spacer()
+                Text(model.item.timestamp)
             }
         }.frame(maxWidth: 300)
-        VStack {
-            Button(action: {
-                model.getData()
-            }, label: {
-                Text("Reload Environment")
-            })
-        }
     }
     init() {
         model.getData()
