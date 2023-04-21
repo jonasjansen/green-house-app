@@ -20,37 +20,44 @@ struct EnvironmentView: View {
             List (model.list) { item in
                 
                 HStack {
-                    Text("Temperature")
+                    Text("Temperature:")
                     Spacer()
                     Text(item.temperature)
                 }
                 HStack {
-                    Text("Humidity")
+                    Text("Humidity:")
                     Spacer()
                     Text(item.humidity)
                 }
                 HStack {
-                    Text("Moisture")
+                    Text("Moisture:")
                     Spacer()
                     Text(item.moisture)
                 }
                 HStack {
-                    Text("Light")
+                    Text("Light:")
                     Spacer()
                     Text(item.light_state)
                 }
                 HStack {
-                    Text("Heating")
+                    Text("Heating:")
                     Spacer()
                     Text(item.heating_state)
                 }
+                HStack {
+                    Text("Updated at:")
+                    Spacer()
+                    Text(item.timestamp)
+                }
             }
+        }.frame(maxWidth: 300)
+        VStack {
             Button(action: {
                 model.getData()
             }, label: {
                 Text("Reload Environment")
             })
-        }.frame(maxWidth: 300)
+        }
     }
     init() {
         model.getData()
