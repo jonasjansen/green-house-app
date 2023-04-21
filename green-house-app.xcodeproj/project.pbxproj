@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01DD747229ED8099000A837C /* green_house_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD747129ED8099000A837C /* green_house_appApp.swift */; };
-		01DD747429ED8099000A837C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD747329ED8099000A837C /* ContentView.swift */; };
 		01DD747629ED80A0000A837C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DD747529ED80A0000A837C /* Assets.xcassets */; };
 		01DD747A29ED80A0000A837C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DD747929ED80A0000A837C /* Preview Assets.xcassets */; };
 		DD84035F29F274200053C3A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD84035E29F274200053C3A3 /* GoogleService-Info.plist */; };
@@ -19,16 +17,18 @@
 		DD84036A29F276CB0053C3A3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036929F276CB0053C3A3 /* FirebaseFirestore */; };
 		DD84036C29F276CB0053C3A3 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036B29F276CB0053C3A3 /* FirebaseFirestoreSwift */; };
 		DD84036E29F276CB0053C3A3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036D29F276CB0053C3A3 /* FirebaseStorage */; };
+		DD84037329F27E910053C3A3 /* FavouriteNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84037129F27E910053C3A3 /* FavouriteNumberView.swift */; };
+		DD84037429F27E910053C3A3 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84037229F27E910053C3A3 /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01DD746E29ED8099000A837C /* green-house-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "green-house-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		01DD747129ED8099000A837C /* green_house_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = green_house_appApp.swift; sourceTree = "<group>"; };
-		01DD747329ED8099000A837C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01DD747529ED80A0000A837C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01DD747729ED80A0000A837C /* green_house_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = green_house_app.entitlements; sourceTree = "<group>"; };
 		01DD747929ED80A0000A837C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DD84035E29F274200053C3A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD84037129F27E910053C3A3 /* FavouriteNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteNumberView.swift; sourceTree = "<group>"; };
+		DD84037229F27E910053C3A3 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +68,8 @@
 		01DD747029ED8099000A837C /* green-house-app */ = {
 			isa = PBXGroup;
 			children = (
-				01DD747129ED8099000A837C /* green_house_appApp.swift */,
-				01DD747329ED8099000A837C /* ContentView.swift */,
+				DD84037129F27E910053C3A3 /* FavouriteNumberView.swift */,
+				DD84037229F27E910053C3A3 /* App.swift */,
 				01DD747529ED80A0000A837C /* Assets.xcassets */,
 				DD84035E29F274200053C3A3 /* GoogleService-Info.plist */,
 				01DD747729ED80A0000A837C /* green_house_app.entitlements */,
@@ -169,8 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DD747429ED8099000A837C /* ContentView.swift in Sources */,
-				01DD747229ED8099000A837C /* green_house_appApp.swift in Sources */,
+				DD84037329F27E910053C3A3 /* FavouriteNumberView.swift in Sources */,
+				DD84037429F27E910053C3A3 /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

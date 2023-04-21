@@ -1,10 +1,5 @@
-//
-//  green_house_appApp.swift
-//  green-house-app
-//
-//  Created by Jonas Jansen on 17.04.23.
-//
 import SwiftUI
+import Firebase
 import FirebaseCore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -15,18 +10,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
   }
 }
 
-
 @main
-
-struct YourApp: App {
-
-  // register app delegate for Firebase setup
+struct FavouritesApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
   var body: some Scene {
     WindowGroup {
-      NavigationView {
-        ContentView()
+      NavigationStack {
+        FavouriteNumberView()
+        Spacer()
       }
     }
   }
