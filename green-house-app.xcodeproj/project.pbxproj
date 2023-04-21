@@ -19,6 +19,10 @@
 		DD84036E29F276CB0053C3A3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036D29F276CB0053C3A3 /* FirebaseStorage */; };
 		DD84037329F27E910053C3A3 /* FavouriteNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84037129F27E910053C3A3 /* FavouriteNumberView.swift */; };
 		DD84037429F27E910053C3A3 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84037229F27E910053C3A3 /* App.swift */; };
+		DD84039129F2A5BF0053C3A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84038C29F2A5BE0053C3A3 /* ContentView.swift */; };
+		DD84039229F2A5BF0053C3A3 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84038E29F2A5BF0053C3A3 /* Todo.swift */; };
+		DD84039329F2A5BF0053C3A3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84039029F2A5BF0053C3A3 /* ViewModel.swift */; };
+		DD84039529F2A7E20053C3A3 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84039429F2A7E20053C3A3 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		DD84035E29F274200053C3A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD84037129F27E910053C3A3 /* FavouriteNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteNumberView.swift; sourceTree = "<group>"; };
 		DD84037229F27E910053C3A3 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		DD84038C29F2A5BE0053C3A3 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DD84038E29F2A5BF0053C3A3 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		DD84039029F2A5BF0053C3A3 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DD84039429F2A7E20053C3A3 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,9 @@
 			children = (
 				DD84037129F27E910053C3A3 /* FavouriteNumberView.swift */,
 				DD84037229F27E910053C3A3 /* App.swift */,
+				DD84038D29F2A5BF0053C3A3 /* Models */,
+				DD84038F29F2A5BF0053C3A3 /* ViewModels */,
+				DD84038B29F2A5BE0053C3A3 /* Views */,
 				01DD747529ED80A0000A837C /* Assets.xcassets */,
 				DD84035E29F274200053C3A3 /* GoogleService-Info.plist */,
 				01DD747729ED80A0000A837C /* green_house_app.entitlements */,
@@ -84,6 +95,31 @@
 				01DD747929ED80A0000A837C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD84038B29F2A5BE0053C3A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD84038C29F2A5BE0053C3A3 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD84038D29F2A5BF0053C3A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD84038E29F2A5BF0053C3A3 /* Todo.swift */,
+				DD84039429F2A7E20053C3A3 /* Environment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD84038F29F2A5BF0053C3A3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DD84039029F2A5BF0053C3A3 /* ViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD84039329F2A5BF0053C3A3 /* ViewModel.swift in Sources */,
+				DD84039529F2A7E20053C3A3 /* Environment.swift in Sources */,
 				DD84037329F27E910053C3A3 /* FavouriteNumberView.swift in Sources */,
 				DD84037429F27E910053C3A3 /* App.swift in Sources */,
+				DD84039129F2A5BF0053C3A3 /* ContentView.swift in Sources */,
+				DD84039229F2A5BF0053C3A3 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

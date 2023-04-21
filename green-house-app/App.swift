@@ -11,14 +11,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 @main
-struct FavouritesApp: App {
+struct GreenHouseApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
   var body: some Scene {
     WindowGroup {
-      NavigationStack {
-        FavouriteNumberView()
-        Spacer()
-      }
+        ContentView()
+      //NavigationStack {
+      //  FavouriteNumberView()
+      //  Spacer()
+      //}
     }
   }
 }
