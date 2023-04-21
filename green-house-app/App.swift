@@ -17,7 +17,6 @@ struct GreenHouseApp: App {
     WindowGroup {
         ControlView()
         EnvironmentView()
-        
     }
   }
 }

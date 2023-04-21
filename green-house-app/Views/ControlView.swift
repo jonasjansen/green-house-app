@@ -9,6 +9,8 @@ import SwiftUI
 import Firebase
 
 struct ControlView: View {
+    @ObservedObject var model = OverrideModel()
+    
     var body: some View {
         VStack {
             Text("Light")
@@ -16,11 +18,13 @@ struct ControlView: View {
             HStack {
                 Button(action: {
                     // Turn light on
+                    model.updateData(documentId: "override_light", status: 1, counter: 1)
                 }, label: {
                     Text("On")
                 })
                 Button(action: {
-                    // Turn light on
+                    // Turn light off
+                    model.updateData(documentId: "override_light", status: 0, counter: 1)
                 }, label: {
                     Text("Off")
                 })
@@ -32,11 +36,13 @@ struct ControlView: View {
             HStack {
                 Button(action: {
                     // Turn heating on
+                    model.updateData(documentId: "override_heating", status: 1, counter: 1)
                 }, label: {
                     Text("On")
                 })
                 Button(action: {
                     // Turn heating on
+                    model.updateData(documentId: "override_heating", status: 0, counter: 1)
                 }, label: {
                     Text("Off")
                 })
@@ -47,12 +53,14 @@ struct ControlView: View {
             //Spacer()
             HStack {
                 Button(action: {
-                    // Turn heating on
+                    // Open window
+                    model.updateData(documentId: "override_window", status: 1, counter: 1)
                 }, label: {
                     Text("Open")
                 })
                 Button(action: {
-                    // Turn heating on
+                    // Close window
+                    model.updateData(documentId: "override_window", status: 0, counter: 1)
                 }, label: {
                     Text("Close")
                 })
