@@ -105,8 +105,6 @@ class ViewModel: ObservableObject {
                                         notes: d["notes"] as? String ?? "")
                         }
                     }
-                    
-                    
                 }
             }
             else {

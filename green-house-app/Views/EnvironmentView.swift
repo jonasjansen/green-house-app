@@ -13,14 +13,36 @@ struct EnvironmentView: View {
     @ObservedObject var model = ViewModelEnvironment()
     @State var name = ""
     @State var notes = ""
+
     
     var body: some View {
         VStack {
             List (model.list) { item in
                 
                 HStack {
-                    Text(item.id)
+                    Text("Temperature")
                     Spacer()
+                    Text(item.temperature)
+                }
+                HStack {
+                    Text("Humidity")
+                    Spacer()
+                    Text(item.humidity)
+                }
+                HStack {
+                    Text("Moisture")
+                    Spacer()
+                    Text(item.moisture)
+                }
+                HStack {
+                    Text("Light")
+                    Spacer()
+                    Text(item.light_state)
+                }
+                HStack {
+                    Text("Heating")
+                    Spacer()
+                    Text(item.heating_state)
                 }
             }
             Button(action: {
@@ -28,7 +50,7 @@ struct EnvironmentView: View {
             }, label: {
                 Text("Reload Environment")
             })
-        }  
+        }.frame(maxWidth: 300)
     }
     init() {
         model.getData()

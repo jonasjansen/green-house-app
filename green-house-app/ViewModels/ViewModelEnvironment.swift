@@ -10,24 +10,21 @@ import Firebase
 
 class ViewModelEnvironment: ObservableObject {
     @Published var list = [Environment]()
+    @Published var item  = Environment( id:"", heating_state:"", humidity:"", light_state:"", moisture:"", temperature:"", timestamp:"")
     
-    
-    func getData() {
-        
+    func getData()
+    {
         // Get a reference to the database
         let db = Firestore.firestore()
         
-        // Read the documents at a specific path
-        //let environmentRef = db.collection("environment")
-        //environmentRef.order(by: "timestamp")
-        db.collection("environment").getDocuments { snapshot, error in
+        db.collection("environment").order(by: "timestamp", descending: true).limit(to: 1).getDocuments
+        { snapshot, error in
             
             // Check for errors
             if error == nil {
                 // No errors
                 
                 if let snapshot = snapshot {
-                    
                     // Update the list property in the main thread
                     DispatchQueue.main.async {
                         
