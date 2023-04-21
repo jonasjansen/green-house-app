@@ -10,7 +10,7 @@ import Firebase
 
 struct EnvironmentView: View {
     
-    @ObservedObject var model = ViewModelEnvironment()
+    @ObservedObject var model = EnvironmentModel()
     @State var name = ""
     @State var notes = ""
 
@@ -41,11 +41,6 @@ struct EnvironmentView: View {
                 Text("Heating:")
                 Spacer()
                 Text(model.item.heating_state)
-            }
-            HStack {
-                Text("Updated at:")
-                Spacer()
-                Text(model.item.timestamp)
             }
         }.frame(maxWidth: 300)
     }

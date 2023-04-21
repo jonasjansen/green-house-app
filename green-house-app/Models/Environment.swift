@@ -14,5 +14,4 @@ struct Environment: Identifiable {
     var light_state: String
     var moisture: String
     var temperature: String
-    var timestamp: String
 }

@@ -8,9 +8,9 @@
 import Foundation
 import Firebase
 
-class ViewModelEnvironment: ObservableObject {
+class EnvironmentModel: ObservableObject {
     @Published var list = [Environment]()
-    @Published var item  = Environment( id:"", heating_state:"", humidity:"", light_state:"", moisture:"", temperature:"", timestamp:"")
+    @Published var item  = Environment( id:"", heating_state:"", humidity:"", light_state:"", moisture:"", temperature:"")
     
     func getData()
     {
@@ -30,8 +30,7 @@ class ViewModelEnvironment: ObservableObject {
                         humidity: d["humidity"] as? String ?? "",
                         light_state: d["light_state"] as? String ?? "",
                         moisture: d["moisture"] as? String ?? "",
-                        temperature: d["temperature"] as? String ?? "",
-                        timestamp: d["timestamp"] as? String ?? "")
+                        temperature: d["temperature"] as? String ?? "")
                 }
             }
     }
