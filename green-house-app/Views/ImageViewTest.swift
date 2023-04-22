@@ -2,6 +2,69 @@ import SwiftUI
 import FirebaseStorage
 import SDWebImageSwiftUI
 
+class TestImage: ObservableObject {
+    @Published var imageURL = URL(string: "")
+    
+    func loadImage(imageName: String) {
+        let storage = Storage.storage().reference(withPath: imageName)
+       storage.downloadURL { (url, error) in
+           if error != nil {
+               print((error?.localizedDescription)!)
+               return
+           }
+           print("Download success")
+           self.imageURL = url!
+       }
+    }
+}
+
+
+struct TestImageView: View {
+    @ObservedObject var model = EnvironmentModel()
+    //@State var imageURL = URL(string: "")
+    @StateObject var testImage = TestImage()
+    
+    var body: some View {
+        VStack{
+            TestImageInnerView(testImage: self.testImage, model: self.model)
+            Text("Image url: \(URL(string: model.item.image_path)?.absoluteString ?? "placeholderOuter2")")
+            WebImage(url: self.testImage.imageURL)
+                 .resizable()
+                 .aspectRatio(contentMode: .fit)
+        .onAppear(perform: loadImageFromFirebase)
+        }
+    }
+    init() {
+        self.model.getData()
+        self.testImage.imageURL = URL(string: model.item.image_path)
+    }
+    func loadImageFromFirebase() {
+         let storage = Storage.storage().reference(withPath: "greenhouse_snapshot.jpg")
+        storage.downloadURL { (url, error) in
+            if error != nil {
+                print((error?.localizedDescription)!)
+                return
+            }
+            print("Download success")
+            self.testImage.imageURL = url!
+        }
+    }
+}
+
+struct TestImageInnerView: View {
+    @ObservedObject var testImage: TestImage
+    @ObservedObject var model = EnvironmentModel()
+
+    var body: some View {
+        Text("Image url2: \(URL(string: model.item.image_path)?.absoluteString ?? "placeholderOuter2")")
+        Button("Reload Image") {
+            self.testImage.loadImage(imageName: model.item.image_path)
+            print("DEBUG: \(model.item.image_path) ")
+        }
+    }
+}
+
+/*
 struct WebImageOuterView: View {
     @ObservedObject var model = EnvironmentModel()
     @State var imageURL = URL(string: "")
@@ -116,21 +179,36 @@ struct ImagetTestv2View: View {
     }
 }
 
-
+class TestImage: ObservableObject {
+    @Published var imageName = ""
+}
 
 
 struct TestContentView: View {
-    @State var imageName = ""
+    //@ObservedObject var imageName: TestImage
+    //@StateObject var imageName = TestImage()
+    @StateObject var model = EnvironmentModel()
+
     @State private var image: WebImage?
 
     var body: some View {
+        /*
         VStack {
-            image?
+            model.image?
                 .resizable()
                 .scaledToFit()
         }
-        .onAppear(perform: loadImage)
+         */
+        VStack{
+            //WebImage(url: URL(string: model.imageUrl))
+            //WebImage(url: URL(string: song.image)).id(song.id)
+            //WebImage(url: URL(string: model.imageUrl))
+            WebImage(url: self.model.imageUrl)
+                 .resizable()
+                 .aspectRatio(contentMode: .fit)
+        }
     }
+    
 
     func loadImage() {
         //let storageRef = Storage.storage().reference(withPath: "greenhouse_snapshot.jpg")
@@ -147,3 +225,12 @@ struct TestContentView: View {
         //image = storageRef.child("images/stars.jpg")
     }
 }
+
+
+struct TestContentWrapperView: View {
+
+    var body: some View {
+        TestContentView()
+    }
+}
+*/

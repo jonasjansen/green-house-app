@@ -17,6 +17,8 @@ class EnvironmentModel: ObservableObject {
     @Published var item  = Environment( id:"", heating_state:"", humidity:"", light_state:"", moisture:"", temperature:"", image_path:"")
     //@Published var imageURL = URL(string: "")
     @Published var imageURL = ""
+    @Published var imageUrl: URL?
+    @Published var image: WebImage?
     
     func getData()
     {
@@ -30,7 +32,8 @@ class EnvironmentModel: ObservableObject {
                 }
                 let d = documents.first
                 if let d = d {
-                    self.loadImageFromFirebase(imagePath: String(describing: d["temperature"]))
+                    //self.loadImageFromFirebase(imagePath: String(describing: d["temperature"]))
+                    self.loadImage()
                     self.imageURL = d["image_path"] as? String ?? ""
                     self.item =  Environment(
                         id: d.documentID,
@@ -53,5 +56,20 @@ class EnvironmentModel: ObservableObject {
          print("Download success")
          //self.imageURL = url!
      }
+    }
+    func loadImage() {
+        print("Environment Model - Download start")
+        //let storageRef = Storage.storage().reference(withPath: "greenhouse_snapshot.jpg")
+        let storage = Storage.storage().reference(withPath: "greenhouse_snapshot.jpg")
+        storage.downloadURL { (url, error) in
+            if error != nil {
+                print((error?.localizedDescription)!)
+                return
+            }
+            print("Environment Model - Download success!")
+            print("\(url!)")
+            self.image = WebImage(url: url)
+            self.imageUrl = URL(string: String(describing:url))
+        }
     }
 }

@@ -15,9 +15,7 @@ struct GreenHouseApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
   var body: some Scene {
     WindowGroup {
-        //WebImageOuterView()
-        //WebImageTestView()
-        TestContentView()
+        TestImageView()
         //ImageView()
         ControlView()
         EnvironmentView()
