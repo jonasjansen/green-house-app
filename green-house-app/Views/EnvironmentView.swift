@@ -42,6 +42,11 @@ struct EnvironmentView: View {
                 Spacer()
                 Text(model.item.heating_state)
             }
+            HStack {
+                Text("Image Path:")
+                Spacer()
+                Text(model.item.image_path)
+            }
         }.frame(maxWidth: 300)
     }
     init() {

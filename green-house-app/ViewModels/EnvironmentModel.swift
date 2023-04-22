@@ -7,10 +7,16 @@
 
 import Foundation
 import Firebase
+import SwiftUI
+import FirebaseStorage
+import SDWebImageSwiftUI
+
 
 class EnvironmentModel: ObservableObject {
     @Published var list = [Environment]()
-    @Published var item  = Environment( id:"", heating_state:"", humidity:"", light_state:"", moisture:"", temperature:"")
+    @Published var item  = Environment( id:"", heating_state:"", humidity:"", light_state:"", moisture:"", temperature:"", image_path:"")
+    //@Published var imageURL = URL(string: "")
+    @Published var imageURL = ""
     
     func getData()
     {
@@ -24,15 +30,28 @@ class EnvironmentModel: ObservableObject {
                 }
                 let d = documents.first
                 if let d = d {
-                    // TODO: Get Image reference and download it.
+                    self.loadImageFromFirebase(imagePath: String(describing: d["temperature"]))
+                    self.imageURL = d["image_path"] as? String ?? ""
                     self.item =  Environment(
                         id: d.documentID,
                         heating_state: d["heating_state"] as? String ?? "",
                         humidity: d["humidity"] as? String ?? "",
                         light_state: d["light_state"] as? String ?? "",
                         moisture: d["moisture"] as? String ?? "",
-                        temperature: d["temperature"] as? String ?? "")
+                        temperature: d["temperature"] as? String ?? "",
+                        image_path: d["image_path"] as? String ?? "")
                 }
             }
+    }
+    func loadImageFromFirebase(imagePath: String) {
+         let storage = Storage.storage().reference(withPath: imagePath)
+         storage.downloadURL { (url, error) in
+             if error != nil {
+                 print((error?.localizedDescription)!)
+                 return
+         }
+         print("Download success")
+         //self.imageURL = url!
+     }
     }
 }

@@ -3,10 +3,28 @@ import FirebaseStorage
 import SDWebImageSwiftUI
 
 struct ImageView: View {
-    @State private var imageURL = URL(string: "")
+    @ObservedObject var model = EnvironmentModel()
+    //@ObservedObject var imagePath = ""
+    @State var imageURL = URL(string: "")
+    /*public struct Song: Identifiable, Codable, Hashable {
+       public var id: String = UUID().uuidString
+       var image: String
+       var title: String
+       var author: String
+       var track: String
+    }
+     */
+    //@State private var song = Song(image: "String", title: "String", author: "String", track: "String")
+    //@State private var song = Song(image: "String", title: "String", author: "String", track: "String")
+
+    
+    
     var body: some View {
         VStack{
-            WebImage(url: imageURL)
+            //WebImage(url: URL(string: model.imageUrl))
+            //WebImage(url: URL(string: song.image)).id(song.id)
+            //WebImage(url: URL(string: model.imageUrl))
+            WebImage(url: self.imageURL)
                  .resizable()
                  .aspectRatio(contentMode: .fit)
         }.onAppear(perform: loadImageFromFirebase)

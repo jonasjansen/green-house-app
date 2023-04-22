@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 
-struct ContentView: View {
+struct FavouriteContentView: View {
     
     @ObservedObject var model = ViewModel()
     
