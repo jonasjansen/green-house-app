@@ -15,10 +15,9 @@ struct GreenHouseApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
   var body: some Scene {
     WindowGroup {
-        //TestImageView()
         ImageView()
-        ControlView()
         EnvironmentView()
+        ControlView()
     }
   }
 }

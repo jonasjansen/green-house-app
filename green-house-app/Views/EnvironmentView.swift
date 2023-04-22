@@ -16,38 +16,49 @@ struct EnvironmentView: View {
 
     
     var body: some View {
-        VStack {
+        VStack(spacing: 15) {
+            Divider()
             HStack {
                 Text("Temperature:")
                 Spacer()
                 Text(model.item.temperature)
             }
+            Divider()
             HStack {
                 Text("Humidity:")
                 Spacer()
                 Text(model.item.humidity)
             }
+        }.frame(maxWidth: 250)
+        VStack(spacing: 15) {
+            Divider()
             HStack {
                 Text("Moisture:")
                 Spacer()
                 Text(model.item.moisture)
             }
+            Divider()
             HStack {
                 Text("Light:")
                 Spacer()
                 Text(model.item.light_state)
             }
+        }.frame(maxWidth: 250)
+        VStack(spacing: 15) {
+            Divider()
             HStack {
                 Text("Heating:")
                 Spacer()
                 Text(model.item.heating_state)
             }
+            Divider()
             HStack {
                 Text("Image Path:")
                 Spacer()
                 Text(model.item.image_path)
             }
-        }.frame(maxWidth: 300)
+            Divider()
+        }.frame(maxWidth: 250)
     }
     init() {
         model.getData()

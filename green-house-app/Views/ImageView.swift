@@ -25,7 +25,6 @@ struct ImageView: View {
     
     var body: some View {
         VStack{
-            Text("Image url: \(URL(string: model.item.image_path)?.absoluteString ?? "greenhouse_placeholder")")
             WebImage(url: self.image.imageURL)
                  .resizable()
                  .aspectRatio(contentMode: .fit)
@@ -56,6 +55,6 @@ struct ImageInnerView: View {
     var body: some View {
         Button("Reload Image") {
             self.image.loadImage(imageName: model.item.image_path)
-        }
+        }.buttonStyle(.bordered)
     }
 }
