@@ -11,6 +11,14 @@
 		01DD747429ED8099000A837C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD747329ED8099000A837C /* ContentView.swift */; };
 		01DD747629ED80A0000A837C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DD747529ED80A0000A837C /* Assets.xcassets */; };
 		01DD747A29ED80A0000A837C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DD747929ED80A0000A837C /* Preview Assets.xcassets */; };
+		DD84035F29F274200053C3A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD84035E29F274200053C3A3 /* GoogleService-Info.plist */; };
+		DD84036229F276CB0053C3A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036129F276CB0053C3A3 /* FirebaseAnalytics */; };
+		DD84036429F276CB0053C3A3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036329F276CB0053C3A3 /* FirebaseAnalyticsSwift */; };
+		DD84036629F276CB0053C3A3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036529F276CB0053C3A3 /* FirebaseDatabase */; };
+		DD84036829F276CB0053C3A3 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036729F276CB0053C3A3 /* FirebaseDatabaseSwift */; };
+		DD84036A29F276CB0053C3A3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036929F276CB0053C3A3 /* FirebaseFirestore */; };
+		DD84036C29F276CB0053C3A3 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036B29F276CB0053C3A3 /* FirebaseFirestoreSwift */; };
+		DD84036E29F276CB0053C3A3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DD84036D29F276CB0053C3A3 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,7 @@
 		01DD747529ED80A0000A837C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01DD747729ED80A0000A837C /* green_house_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = green_house_app.entitlements; sourceTree = "<group>"; };
 		01DD747929ED80A0000A837C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD84035E29F274200053C3A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD84036829F276CB0053C3A3 /* FirebaseDatabaseSwift in Frameworks */,
+				DD84036629F276CB0053C3A3 /* FirebaseDatabase in Frameworks */,
+				DD84036429F276CB0053C3A3 /* FirebaseAnalyticsSwift in Frameworks */,
+				DD84036A29F276CB0053C3A3 /* FirebaseFirestore in Frameworks */,
+				DD84036E29F276CB0053C3A3 /* FirebaseStorage in Frameworks */,
+				DD84036229F276CB0053C3A3 /* FirebaseAnalytics in Frameworks */,
+				DD84036C29F276CB0053C3A3 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +71,7 @@
 				01DD747129ED8099000A837C /* green_house_appApp.swift */,
 				01DD747329ED8099000A837C /* ContentView.swift */,
 				01DD747529ED80A0000A837C /* Assets.xcassets */,
+				DD84035E29F274200053C3A3 /* GoogleService-Info.plist */,
 				01DD747729ED80A0000A837C /* green_house_app.entitlements */,
 				01DD747829ED80A0000A837C /* Preview Content */,
 			);
@@ -85,6 +102,15 @@
 			dependencies = (
 			);
 			name = "green-house-app";
+			packageProductDependencies = (
+				DD84036129F276CB0053C3A3 /* FirebaseAnalytics */,
+				DD84036329F276CB0053C3A3 /* FirebaseAnalyticsSwift */,
+				DD84036529F276CB0053C3A3 /* FirebaseDatabase */,
+				DD84036729F276CB0053C3A3 /* FirebaseDatabaseSwift */,
+				DD84036929F276CB0053C3A3 /* FirebaseFirestore */,
+				DD84036B29F276CB0053C3A3 /* FirebaseFirestoreSwift */,
+				DD84036D29F276CB0053C3A3 /* FirebaseStorage */,
+			);
 			productName = "green-house-app";
 			productReference = 01DD746E29ED8099000A837C /* green-house-app.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +139,9 @@
 				Base,
 			);
 			mainGroup = 01DD746529ED8099000A837C;
+			packageReferences = (
+				DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 01DD746F29ED8099000A837C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +158,7 @@
 			files = (
 				01DD747A29ED80A0000A837C /* Preview Assets.xcassets in Resources */,
 				01DD747629ED80A0000A837C /* Assets.xcassets in Resources */,
+				DD84035F29F274200053C3A3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +227,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,6 +281,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -262,6 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "green-house-app/green_house_app.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"green-house-app/Preview Content\"";
@@ -269,6 +304,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Green House";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -279,7 +315,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -300,6 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "green-house-app/green_house_app.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"green-house-app/Preview Content\"";
@@ -307,6 +344,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Green House";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -317,7 +355,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -354,6 +392,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD84036129F276CB0053C3A3 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		DD84036329F276CB0053C3A3 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		DD84036529F276CB0053C3A3 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		DD84036729F276CB0053C3A3 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		DD84036929F276CB0053C3A3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DD84036B29F276CB0053C3A3 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		DD84036D29F276CB0053C3A3 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD84036029F276CB0053C3A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01DD746629ED8099000A837C /* Project object */;
 }
