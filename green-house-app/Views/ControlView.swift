@@ -50,7 +50,42 @@ struct ControlView: View {
                 }
             }
             VStack {
-                
+                HStack {
+                    Text("Humidity")
+                    Spacer()
+                    Button(action: {
+                        // Open window
+                        model.updateData(documentId: "override_humidity", status: 1, counter: 1)
+                    }, label: {
+                        Text("On")
+                    }).buttonStyle(.bordered).frame(width: 75)
+                    Button(action: {
+                        // Close window
+                        model.updateData(documentId: "override_humidity", status: 0, counter: 1)
+                    }, label: {
+                        Text("Off")
+                    }).buttonStyle(.bordered).frame(width: 75)
+                }
+            }
+            VStack {
+                HStack {
+                    Text("Watering")
+                    Spacer()
+                    Button(action: {
+                        // Open window
+                        model.updateData(documentId: "override_watering", status: 1, counter: 1)
+                    }, label: {
+                        Text("On")
+                    }).buttonStyle(.bordered).frame(width: 75)
+                    Button(action: {
+                        // Close window
+                        model.updateData(documentId: "override_watering", status: 0, counter: 1)
+                    }, label: {
+                        Text("Off")
+                    }).buttonStyle(.bordered).frame(width: 75)
+                }
+            }
+            VStack {
                 HStack {
                     Text("Window")
                     Spacer()
@@ -59,7 +94,7 @@ struct ControlView: View {
                         model.updateData(documentId: "override_window", status: 1, counter: 1)
                     }, label: {
                         Text("Open")
-                    }).buttonStyle(.bordered)
+                    }).buttonStyle(.bordered).frame(width: 75)
                     Button(action: {
                         // Close window
                         model.updateData(documentId: "override_window", status: 0, counter: 1)

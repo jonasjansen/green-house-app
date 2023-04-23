@@ -20,6 +20,6 @@ class OverrideModel: ObservableObject {
         let dateString = formatter.string(from: now)
         
         // Set the data to update
-        db.collection("override").document(documentId).setData(["name":status, "counter": counter, "timestamp": dateString])
+        db.collection("override").document(documentId).setData(["status":status, "counter": counter, "timestamp": dateString])
     }
 }

@@ -19,7 +19,6 @@
 		DD84039B29F2BF960053C3A3 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84039A29F2BF960053C3A3 /* ControlView.swift */; };
 		DD84039D29F2CA6C0053C3A3 /* OverrideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84039C29F2CA6C0053C3A3 /* OverrideModel.swift */; };
 		DD8403A229F2DB640053C3A3 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8403A129F2DB640053C3A3 /* ImageView.swift */; };
-		DD8403A729F31CCE0053C3A3 /* ImageViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8403A629F31CCE0053C3A3 /* ImageViewTest.swift */; };
 		DD9DC56129F3286B003EDEEF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DD9DC56029F3286B003EDEEF /* FirebaseAnalytics */; };
 		DD9DC56329F3286B003EDEEF /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD9DC56229F3286B003EDEEF /* FirebaseAnalyticsSwift */; };
 		DD9DC56529F3286B003EDEEF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DD9DC56429F3286B003EDEEF /* FirebaseAuth */; };
@@ -46,7 +45,6 @@
 		DD84039A29F2BF960053C3A3 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		DD84039C29F2CA6C0053C3A3 /* OverrideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideModel.swift; sourceTree = "<group>"; };
 		DD8403A129F2DB640053C3A3 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		DD8403A629F31CCE0053C3A3 /* ImageViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 				DD8403A129F2DB640053C3A3 /* ImageView.swift */,
 				DD84039829F2AF190053C3A3 /* EnvironmentView.swift */,
 				DD84039A29F2BF960053C3A3 /* ControlView.swift */,
-				DD8403A629F31CCE0053C3A3 /* ImageViewTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 				DD84039D29F2CA6C0053C3A3 /* OverrideModel.swift in Sources */,
 				DD84037429F27E910053C3A3 /* App.swift in Sources */,
 				DD84039B29F2BF960053C3A3 /* ControlView.swift in Sources */,
-				DD8403A729F31CCE0053C3A3 /* ImageViewTest.swift in Sources */,
 				DD84039229F2A5BF0053C3A3 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

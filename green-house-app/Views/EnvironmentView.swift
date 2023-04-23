@@ -53,9 +53,9 @@ struct EnvironmentView: View {
             }
             Divider()
             HStack {
-                Text("Image Path:")
+                Text("Window:")
                 Spacer()
-                Text(model.item.image_path)
+                Text(model.item.window_state)
             }
             Divider()
         }.frame(maxWidth: 250)

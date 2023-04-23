@@ -15,4 +15,5 @@ struct Environment: Identifiable {
     var moisture: String
     var temperature: String
     var image_path: String
+    var window_state: String
 }
