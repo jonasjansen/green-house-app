@@ -13,7 +13,7 @@ import SDWebImageSwiftUI
 
 
 class EnvironmentModel: ObservableObject {
-    @Published var item  = Environment( id:"", heating_state:"", humidity:"", light_state:"", moisture:"", temperature:"", image_path:"", window_state:"")
+    @Published var item  = Environment( id:"", heating_state:"", humidity:"", light_state:"", moisture:"", temperature:"", image_path:"", window_state:"", classify_result:"")
         
     func getData()
     {
@@ -36,7 +36,8 @@ class EnvironmentModel: ObservableObject {
                         moisture: d["moisture"] as? String ?? "",
                         temperature: d["temperature"] as? String ?? "",
                         image_path: d["image_path"] as? String ?? "",
-                        window_state: d["window_state"] as? String ?? ""
+                        window_state: d["window_state"] as? String ?? "",
+                        classify_result: d["classify_result"] as? String ?? ""
                     )
                 }
         }

@@ -16,4 +16,6 @@ struct Environment: Identifiable {
     var temperature: String
     var image_path: String
     var window_state: String
+    var classify_result: String
 }
+

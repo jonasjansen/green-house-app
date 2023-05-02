@@ -57,6 +57,14 @@ struct EnvironmentView: View {
                 Spacer()
                 Text(model.item.window_state)
             }
+        }.frame(maxWidth: 250)
+        VStack(spacing: 15) {
+            Divider()
+            HStack {
+                Text("Classify:")
+                Spacer()
+                Text(model.item.classify_result)
+            }
             Divider()
         }.frame(maxWidth: 250)
     }
